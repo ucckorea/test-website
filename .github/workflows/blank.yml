@@ -24,6 +24,10 @@ jobs:
       run: |
         Expand-Archive -Path hyperdbg.zip -DestinationPath hyperdbg
 
+    - name: List contents of HyperDbg
+      run: |
+        Get-ChildItem -Path hyperdbg -Recurse
+
     - name: Set up Go
       uses: actions/setup-go@v3
       with:
